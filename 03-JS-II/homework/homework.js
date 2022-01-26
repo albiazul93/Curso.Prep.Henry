@@ -102,6 +102,13 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+
+  //if (Number.isInteger(numero)){
+  //return true;
+  //} else {
+  //  return false;
+  //}
+
   if (numero === Math.floor(numero)) {
     return true;
   } return false;
