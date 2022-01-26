@@ -21,18 +21,22 @@ function obtenerLargoDelArray(array) {
   return array.length;
 }
 
-
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+
   var nuevoArray = [];
   for (var i = 0; i < array.length; i++) {
     nuevoArray[i] = array[i] + 1;
-  }
 
+  }
   return nuevoArray;
+
+  /* for (var i = 0; i < array.length; i++) {
+     array[i] = array[i] + 1;
+   } return array*/
 
 }
 
@@ -41,8 +45,16 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array[array.push(elemento)];
+
+  //array[array.length] = elemento;
+  //return array
+
+  //array[array.push(elemento)];
+  //return array;
+
+  array.push(elemento)
   return array;
+
 }
 
 
@@ -51,8 +63,12 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array[array.unshift(elemento)];
-  return array;
+
+  //array[array.unshift(elemento)];
+  //return array;
+
+  array.unshift(elemento)
+  return array
 
 }
 
@@ -72,6 +88,9 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+
+  /* return array.includes(elemento)*/
+
   for (var i = 0; i < array.length; i++) {
     if (array[i] === elemento)
       return true;
@@ -84,11 +103,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  var suma = 0;
+  var contadorSuma = 0;
   for (var i = 0; i < numeros.length; i++) {
-    suma = suma + numeros[i];
+    contadorSuma = contadorSuma + numeros[i];
   }
-  return suma;
+  return contadorSuma;
 
 }
 
@@ -135,7 +154,7 @@ function cuentoElementos(arreglo) {
   //Escribe tu código aquí
   let contador = 0;
   for (let i = 0; i < arreglo.length; i++) {
-    if (arreglo[i] > 19) {
+    if (arreglo[i] > 18) {
       contador++
     }
   }
@@ -160,11 +179,17 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  let num = n.toString();
+
+  /*let num = n.toString();
   if (num.charAt(0) === "9") {
     return true;
   }
-  return false;
+  return false;*/
+
+  var nStr = n.toString();
+  if (nStr[0] === '9'){      // o [0] == 9
+    return true
+  } return false;
 
 }
 
