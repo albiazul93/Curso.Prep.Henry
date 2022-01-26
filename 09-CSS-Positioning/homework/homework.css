@@ -58,3 +58,14 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 #ejercicioCinco {
     flex-direction: row-reverse;
 }
+
+/* Ejercicio 7. */
+#ejercicioSiete {
+    position: relative;
+    align-items: center;
+}
+#elementoUno {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
